@@ -1,0 +1,198 @@
+<!-- Document declaration -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CO2-Footprint-Awareness</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Sytle.css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery & DataTables-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+  <!-- DataTables Script -->
+  <script>
+  $(document).ready(function () {
+    $('#co2Table').DataTable({
+      language: {
+        search: "Search:",
+        lengthMenu: "Show _MENU_",
+        info: "",
+        paginate: {
+          previous: "Previous",
+          next: "Next"
+        }
+      }
+    });
+  });
+  </script>
+
+  <!-- RTL - LTR Scipt -->
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    const isRTL = userLang.startsWith("ar", "he", "fa", "ur"); 
+
+    document.documentElement.setAttribute("lang", userLang);
+    document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = isRTL
+      ? "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css"
+      : "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css";
+    document.head.appendChild(link);
+  </script>
+</head>
+
+<body class="bg-body-secondary text-dark">
+
+<!-- Header -->
+<header class="bg-success-subtle border-bottom border-success shadow-sm">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">
+      <img src="IPWA01-01 Case Study Logo V3.0.png" alt="logo" width="70" height="70">
+      CO2-Footprint-Awareness
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#table">Current Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- Content -->
+<main class="container my-5">
+  <div class="row flex-column-reverse flex-md-row align-items-center bg-light rounded-4">
+    <div class="col" style="padding-top: 1rem; padding-bottom: 1rem;">
+      <h1 class="text-success">Understanding CO₂ Emissions - Why They Matter</h1>
+      <p>
+        Carbon dioxide (CO₂) is the most significant greenhouse gas released by human activity, primarily through the burning of fossil fuels, industrial processes, and deforestation.        As CO₂ accumulates in the atmosphere, it traps heat and accelerates global warming. 
+        The consequences are far-reaching: rising sea levels, extreme weather events, loss of biodiversity, and growing threats to food and water security.
+        Tracking CO₂ emissions is not just a scientific task — it is a societal necessity.
+        By understanding who emits how much, where, and why, we can hold governments and corporations accountable and develop more effective strategies for climate protection.
+        Transparent, data-driven insights are key to reducing our carbon footprint and reaching international climate goals like those set in the Paris Agreement.
+        This platform provides an overview of global and corporate CO₂ emissions to inform users, raise awareness, and support action. 
+        Whether you're a student, policymaker, activist, or simply curious, understanding CO₂ emissions is the first step toward a more sustainable future.</p>
+      </div>
+      <div class="col text-center d-none d-md-block">
+        <img src="pollution.png" alt="pollution" class="img-fluid d-block mx-auto rounded-3 border border-success-subtle shadow-sm" style="max-width: 300px; height: auto;"  a>
+      </div>
+  </div>
+
+  <div class="container bg-white rounded-4 shadow-sm mt-5 p-4">
+    <h2 id="table" class="mt-4 mb-1 text-center">CO₂-EmissionData</h2>
+    <div class="table-responsive">
+      <table id="co2Table" class="table table-striped table-hover table-bordered border-dark">
+       <thead class="table-dark text-center">
+          <tr>
+           <th>Type</th>
+            <th>Name</th>
+            <th>CO₂-Emission (Mt/Year)</th>
+           <th>Last Updated</th>
+         </tr>
+       </thead>
+        <tbody>
+          <tr><td>Country</td><td>Emissionia</td><td>6,110</td><td>2025-04-22</td></tr>
+            <tr><td>Country</td><td>Carbonistan</td><td>3,760</td><td>2025-05-03</td></tr>
+            <tr><td>Country</td><td>Solaria</td><td>950</td><td>2025-04-30</td></tr>
+            <tr><td>Country</td><td>Neutraland</td><td>130</td><td>2025-05-15</td></tr>
+            <tr><td>Country</td><td>Greenovia</td><td>410</td><td>2025-05-18</td></tr>
+            <tr><td>Country</td><td>Pollutia</td><td>6,430</td><td>2025-05-01</td></tr>
+            <tr><td>Country</td><td>Greentopia</td><td>870</td><td>2025-05-03</td></tr>
+            <tr><td>Country</td><td>Atmospharia</td><td>3,520</td><td>2025-04-30</td></tr>
+            <tr><td>Country</td><td>Carbonesia</td><td>4,110</td><td>2025-05-06</td></tr>
+            <tr><td>Country</td><td>Smogistan</td><td>5,960</td><td>2025-05-04</td></tr>
+            <tr><td>Country</td><td>Cleanland</td><td>310</td><td>2025-05-02</td></tr>
+            <tr><td>Country</td><td>Bioverda</td><td>1,420</td><td>2025-05-07</td></tr>
+            <tr><td>Country</td><td>Windora</td><td>260</td><td>2025-05-01</td></tr>
+            <tr><td>Country</td><td>Solaristan</td><td>980</td><td>2025-05-03</td></tr>
+            <tr><td>Country</td><td>Hydronia</td><td>410</td><td>2025-04-29</td></tr>
+            <tr><td>Country</td><td>Burnovia</td><td>6,200</td><td>2025-05-05</td></tr>
+            <tr><td>Country</td><td>Recyclovia</td><td>650</td><td>2025-05-06</td></tr>
+            <tr><td>Country</td><td>Coalasia</td><td>4,800</td><td>2025-04-30</td></tr>
+            <tr><td>Country</td><td>Gaslandia</td><td>3,900</td><td>2025-05-07</td></tr>
+            <tr><td>Country</td><td>Forestia</td><td>700</td><td>2025-04-28</td></tr>
+            <tr><td>Country</td><td>Smokania</td><td>5,500</td><td>2025-05-02</td></tr>
+            <tr><td>Country</td><td>Emissionora</td><td>4,400</td><td>2025-05-05</td></tr>
+            <tr><td>Country</td><td>Sustainica</td><td>520</td><td>2025-05-06</td></tr>
+            <tr><td>Country</td><td>Climata</td><td>1,100</td><td>2025-05-04</td></tr>
+            <tr><td>Country</td><td>Netzeroia</td><td>80</td><td>2025-05-03</td></tr>
+
+            <tr><td>Company</td><td>CarbonWorks Ltd.</td><td>1,950</td><td>2025-05-01</td></tr>
+            <tr><td>Company</td><td>Greentech Solutions</td><td>230</td><td>2025-05-02</td></tr>
+            <tr><td>Company</td><td>SkyBurn Corp.</td><td>2,110</td><td>2025-05-03</td></tr>
+            <tr><td>Company</td><td>EcoGrid International</td><td>350</td><td>2025-05-01</td></tr>
+            <tr><td>Company</td><td>BlackFuel Inc.</td><td>1,870</td><td>2025-05-04</td></tr>
+            <tr><td>Company</td><td>GreenFuture PLC</td><td>190</td><td>2025-05-05</td></tr>
+            <tr><td>Company</td><td>Pollutech GmbH</td><td>2,400</td><td>2025-05-06</td></tr>
+            <tr><td>Company</td><td>HydroNova</td><td>120</td><td>2025-05-02</td></tr>
+            <tr><td>Company</td><td>AtmosEnergy Co.</td><td>990</td><td>2025-05-04</td></tr>
+            <tr><td>Company</td><td>Renewon AG</td><td>160</td><td>2025-04-30</td></tr>
+            <tr><td>Company</td><td>BioPower Systems</td><td>210</td><td>2025-05-01</td></tr>
+            <tr><td>Company</td><td>OldEnergy United</td><td>2,030</td><td>2025-05-03</td></tr>
+            <tr><td>Company</td><td>CoalCore Ltd.</td><td>2,500</td><td>2025-05-06</td></tr>
+            <tr><td>Company</td><td>ZeroPoint Energy</td><td>90</td><td>2025-05-07</td></tr>
+            <tr><td>Company</td><td>GasNova SE</td><td>1,110</td><td>2025-05-05</td></tr>
+            <tr><td>Company</td><td>EmissioMax Corp.</td><td>2,280</td><td>2025-04-29</td></tr>
+            <tr><td>Company</td><td>SolarSphere</td><td>130</td><td>2025-05-02</td></tr>
+            <tr><td>Company</td><td>Combustix Inc.</td><td>2,040</td><td>2025-05-03</td></tr>
+            <tr><td>Company</td><td>ClimateForge</td><td>410</td><td>2025-05-04</td></tr>
+            <tr><td>Company</td><td>GreenSpark Ltd.</td><td>180</td><td>2025-05-06</td></tr>
+            <tr><td>Company</td><td>FutureFuels Inc.</td><td>1,120</td><td>2025-05-05</td></tr>
+            <tr><td>Company</td><td>NovaCoal Ltd.</td><td>1,980</td><td>2025-05-13</td></tr>
+            <tr><td>Company</td><td>ZeroX Industries</td><td>120</td><td>2025-04-27</td></tr>
+            <tr><td>Company</td><td>EcoGlobal SE</td><td>350</td><td>2025-05-10</td></tr>
+            <tr><td>Company</td><td>BlackCarbon Corp.</td><td>2,150</td><td>2025-04-25</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+
+<footer class="bg-success-subtle mt-3 py-2 border-top border-success">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h6 class="text-success fw-bold">CO₂Aware</h6>
+        <p class="small text-muted">© 2025 CO₂Aware. All rights reserved.</p>
+      </div>
+
+      <div class="col-md-6">
+        <ul class="list-unstyled small">
+          <li><a href="/imprint.html" class="text-decoration-none text-success">Imprint</a></li>
+          <li><a href="/privacy.html" class="text-decoration-none text-success">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer> 
+
+</body>
+</html>
+

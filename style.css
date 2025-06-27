@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding-bottom: 4rem;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    background: #853c3c;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dataTables_filter {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
